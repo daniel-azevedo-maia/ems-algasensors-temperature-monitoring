@@ -18,6 +18,7 @@ public class SensorMonitoringController {
 
     @GetMapping
     public SensorMonitoringOutput getDetail(@PathVariable TSID sensorId) {
+
         SensorMonitoring sensorMonitoring = findByIdOrDefault(sensorId);
         
         return SensorMonitoringOutput.builder()
